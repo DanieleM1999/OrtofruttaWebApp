@@ -5,14 +5,15 @@
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
          http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
 	version="3.1">
+	
 	<servlet>
-		<servlet-name>ortofrutta</servlet-name>
-		<servlet-class>it.dstech.OrtofruttaWebApp</servlet-class>
+		<servlet-name>store</servlet-name>
+		<servlet-class>it.dstech.mainwebapp.MainServlet</servlet-class>
 	</servlet>
 	
 	<servlet-mapping>
-		<servlet-name>ortofrutta</servlet-name>
-		<url-pattern>/pallino</url-pattern>
+		<servlet-name>store</servlet-name>
+		<url-pattern>/store-menu</url-pattern>
 	</servlet-mapping>
 
 
