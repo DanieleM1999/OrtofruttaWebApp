@@ -41,6 +41,11 @@ public class Prodotto {
 	public void setInfo(String info) {
 		this.info = info;
 	}
+
+	@Override
+	public String toString() {
+		return name + " [Inventories=" + inventories + ", Price=" + price + ", Info=" + info + "]";
+	}
 	
 	
 }

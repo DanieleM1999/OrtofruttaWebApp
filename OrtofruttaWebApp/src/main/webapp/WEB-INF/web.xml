@@ -8,13 +8,55 @@
 	
 	<servlet>
 		<servlet-name>store</servlet-name>
-		<servlet-class>it.dstech.mainwebapp.MainServlet</servlet-class>
+		<servlet-class>it.dstech.mainwebapp.Reindirizzamento</servlet-class>
 	</servlet>
-	
 	<servlet-mapping>
 		<servlet-name>store</servlet-name>
 		<url-pattern>/store-menu</url-pattern>
 	</servlet-mapping>
 
-
+	<servlet>
+		<servlet-name>aggiungiProdotto</servlet-name>
+		<servlet-class>it.dstech.mainwebapp.AggiungiProdotto</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>aggiungiProdotto</servlet-name>
+		<url-pattern>/aggiungiProdotto</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>aquisto</servlet-name>
+		<servlet-class>it.dstech.mainwebapp.Aquisto</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>aquisto</servlet-name>
+		<url-pattern>/aquisto</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>carico</servlet-name>
+		<servlet-class>it.dstech.mainwebapp.Carico</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>carico</servlet-name>
+		<url-pattern>/carico</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>prezzo</servlet-name>
+		<servlet-class>it.dstech.mainwebapp.NuovoPrezzo</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>prezzo</servlet-name>
+		<url-pattern>/prezzo</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Desc</servlet-name>
+		<servlet-class>it.dstech.mainwebapp.NuovaDesc</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Desc</servlet-name>
+		<url-pattern>/Desc</url-pattern>
+	</servlet-mapping>
 </web-app>
