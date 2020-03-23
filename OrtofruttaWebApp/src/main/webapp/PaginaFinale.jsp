@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h3>Grazie di aver effettuato cose sul nostro sito, noi ci siamo sempre attento (: </h3>
+<h3>Grazie per aver scelto il nostro store, addddios </h3>
 
 <form action="SelectMenuPrincipale.jsp">
 <br> <input type="submit" value="Back">

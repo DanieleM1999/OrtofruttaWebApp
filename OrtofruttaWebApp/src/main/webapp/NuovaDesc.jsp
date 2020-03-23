@@ -8,7 +8,7 @@
 </head>
 <body>
 <h3>Inserisci i dati Richiesti</h3>
-<form action="Desc">
+<form action="Desc" method="post">
 
  <label for="Name">Inserisci nome del prodotto aquistato:</label>
   <input type="text" id="Name" name="Name"><br><br>

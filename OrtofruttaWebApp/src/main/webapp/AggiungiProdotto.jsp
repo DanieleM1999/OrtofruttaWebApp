@@ -11,7 +11,7 @@
 <body>
 <h1>Crea il Prodotto</h1>
 
-<form action="aggiungiProdotto">
+<form action="aggiungiProdotto" method="post">
   
   <label for="Name">Inserisci nome:</label>
   <input type="text" id="Name" name="Name"><br><br>
