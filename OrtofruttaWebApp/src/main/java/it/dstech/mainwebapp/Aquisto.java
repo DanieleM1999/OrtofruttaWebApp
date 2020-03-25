@@ -1,7 +1,9 @@
 package it.dstech.mainwebapp;
 
 import java.io.IOException;
+
 import java.sql.SQLException;
+
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -24,11 +26,14 @@ public class Aquisto extends HttpServlet {
 	String nomeProdotto = req.getParameter("Name");
 	int quantita = Integer.parseInt(req.getParameter("inv"));
 	try {
-		accessoDB.aquisto(quantita, nomeProdotto);
+		if(accessoDB.aquisto(quantita, nomeProdotto)) {
+		req.getRequestDispatcher("PaginaFinale.jsp").forward(req, resp);	
+		}else {
+			req.getRequestDispatcher("Errore.jsp").forward(req, resp);
+		}
 		} catch (ClassNotFoundException | SQLException e) {
 			e.printStackTrace();
 		}
-	req.getRequestDispatcher("PaginaFinale.jsp").forward(req, resp);
-	}
 	
+	}
 }

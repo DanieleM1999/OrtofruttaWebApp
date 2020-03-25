@@ -55,7 +55,7 @@ background-image:url("https://i.ibb.co/NTb2zpG/Whats-App-Image-2020-03-23-at-19-
 	<%
 		} else {
 	%>
-	<br> <br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<br> <br><br><br><br><br><br><br><br><br><br>
 	<h1>Benvenuto nel nostro bel negozio</h1>
 	<p>-----------------------------</p>
 	<h2>Questo è il negozietto di due personcine : Giulio e Daniele</h2>

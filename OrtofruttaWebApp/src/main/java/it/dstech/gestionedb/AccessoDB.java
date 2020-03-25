@@ -39,9 +39,17 @@ public class AccessoDB {
 		}
 		return listaprodotti;
 	}
+	public boolean controllo(Prodotto prodotto) throws ClassNotFoundException, SQLException {
+		for (Prodotto p : listaProdotti()) {
+			if(p.getName().equalsIgnoreCase(prodotto.getName())) {
+				return false;
+			}
+		}
+		return true;
+	}
 	
-	public void aggiungiProdotto(Prodotto prodotto) throws SQLException, ClassNotFoundException {
-		
+	public boolean aggiungiProdotto(Prodotto prodotto) throws SQLException, ClassNotFoundException {
+		if(controllo(prodotto)) {
 		String query = "INSERT INTO ProdottiOrtofrutta (Name,Inventories,Price,Info) VALUES (?,?,?,?);";
 		PreparedStatement statement = accessoDB().prepareStatement(query);
 		statement.setString(1, prodotto.getName());
@@ -49,17 +57,24 @@ public class AccessoDB {
 		statement.setDouble(3, prodotto.getPrice());
 		statement.setString(4,prodotto.getInfo());
 		statement.execute();
+		return true;
+		}
+		return false;
 		
 	}
 	
-	public void aquisto(int numeroDaSottrarre,String nomeProdotto) throws SQLException, ClassNotFoundException {
+	public boolean aquisto(int numeroDaSottrarre,String nomeProdotto) throws SQLException, ClassNotFoundException {
 		int inv = inventarioAttuale(nomeProdotto)-numeroDaSottrarre;
+		if(inv>=0) {
 		String query = "UPDATE ProdottiOrtofrutta SET Inventories = ? where Name = ? ;";
 		PreparedStatement statement = accessoDB().prepareStatement(query);
 		statement.setInt(1, inv);
 		statement.setString(2, nomeProdotto);
 		statement.execute();
-		
+		return true;
+		}else {
+			return false;
+		}
 	}
 
 	private int inventarioAttuale(String nomeProdotto) throws SQLException, ClassNotFoundException {

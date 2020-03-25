@@ -29,11 +29,15 @@ public class AggiungiProdotto extends HttpServlet {
 		String info = req.getParameter("info");
 		try {
 			Prodotto prodotto = new Prodotto(name, quantita, prezzo, info);
-			accessoDB.aggiungiProdotto(prodotto);
+			if(accessoDB.aggiungiProdotto(prodotto)) {
+			req.getRequestDispatcher("PaginaFinale.jsp").forward(req, resp);	
+			}else {
+				req.getRequestDispatcher("Errore.jsp").forward(req, resp);
+			}
 		} catch (ClassNotFoundException | SQLException e1) {
 			e1.printStackTrace();
 		}
-		req.getRequestDispatcher("PaginaFinale.jsp").forward(req, resp);
+		
 	}
 
 }
