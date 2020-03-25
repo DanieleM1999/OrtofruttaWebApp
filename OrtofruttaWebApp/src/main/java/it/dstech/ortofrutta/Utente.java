@@ -9,10 +9,12 @@ public class Utente {
 	private String name;
 	private String cognome;
 	private String eta;
+	private String tipo;
 	private List<Scontrino> listaScontrini;
 	
-	public Utente(String username,String name,String cognome, String eta) {
+	public Utente(String username,String name,String cognome, String eta,String tipo) {
 		super();
+		this.setTipo(tipo);
 		this.username = username;
 		this.name = name;
 		this.cognome = cognome;
@@ -58,6 +60,14 @@ public class Utente {
 
 	public void setListaScontrini(List<Scontrino> listaScontrini) {
 		this.listaScontrini = listaScontrini;
+	}
+
+	public String getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
 	}
 	
 	

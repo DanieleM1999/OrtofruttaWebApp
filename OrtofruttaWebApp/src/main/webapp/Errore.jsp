@@ -31,6 +31,8 @@ background-image:url("https://i.ibb.co/NTb2zpG/Whats-App-Image-2020-03-23-at-19-
 <br><br><br><br><br><br><br>
 <h1>ERRORE DATI!!!</h1>
 <h2>Prova a controllare:</h2>
+<p>-Se stavi accedendo(il tuo user potrebbe non essere registrato).</p>
+<p>-Se ti stavi registrando(il tuo user potrebbe essere esistente).</p>
 <p>-Se stavi acquistando un prodotto(la quantità di prodotto).</p>
 <p>-Se stavi aggiungendo un prodotto(il prodotto potrebbe essere già esistente).</p>
 

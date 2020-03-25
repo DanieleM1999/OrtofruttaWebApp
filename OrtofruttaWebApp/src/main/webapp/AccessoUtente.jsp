@@ -12,7 +12,7 @@
 <body>
 <br> <br><br> <br><br> <br><br> <br><br> <br>
 	<h3 style="background-color:black; color:white;padding:20px;text-align:center;">	Benvenuto Inserisci le tue finte credenziali :</h3>
-	<form style="text-align: center;" action="login" method="post">
+	<form style="text-align: center;" action="login">
 		<label for="Username">Inserisci l'username dell'utente:</label> <input
 			type="text" id="Username" name="Username"><br> <br>
 		<input type="submit" value="Continua...">

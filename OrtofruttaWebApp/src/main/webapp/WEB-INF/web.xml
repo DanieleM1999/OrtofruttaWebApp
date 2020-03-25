@@ -60,7 +60,7 @@
 		<url-pattern>/Desc</url-pattern>
 	</servlet-mapping>
 	
-		<servlet>
+	<servlet>
 		<servlet-name>login</servlet-name>
 		<servlet-class>it.dstech.accesso.AccessoUtente</servlet-class>
 	</servlet>
@@ -69,12 +69,12 @@
 		<url-pattern>/login</url-pattern>
 	</servlet-mapping>
 	
-			<servlet>
-		<servlet-name>register</servlet-name>
+	<servlet>
+		<servlet-name>Registrazione</servlet-name>
 		<servlet-class>it.dstech.accesso.RegistraUtente</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>register</servlet-name>
-		<url-pattern>/register</url-pattern>
+		<servlet-name>Registrazione</servlet-name>
+		<url-pattern>/Registrazione</url-pattern>
 	</servlet-mapping>
 </web-app>
