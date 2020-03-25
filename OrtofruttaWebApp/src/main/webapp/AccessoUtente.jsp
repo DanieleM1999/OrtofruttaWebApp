@@ -4,19 +4,22 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>"Login"</title>
+<style>
+
+</style>
 </head>
 <body>
-	<h3>Inserisci i dati Richiesti</h3>
-	<form action="accedi" method="post">
+<br> <br><br> <br><br> <br><br> <br><br> <br>
+	<h3 style="background-color:black; color:white;padding:20px;text-align:center;">	Benvenuto Inserisci le tue finte credenziali :</h3>
+	<form style="text-align: center;" action="login" method="post">
 		<label for="Username">Inserisci l'username dell'utente:</label> <input
 			type="text" id="Username" name="Username"><br> <br>
-		<br> <br> <input type="submit" value="Continua">
+		<input type="submit" value="Continua...">
 	</form>
-
-	<form action="SelectMenuPrincipale.jsp">
-		<br> <input type="submit" value="Back">
+	<br>
+	<form style="text-align: center;background-color: black;padding: 5px;color: white;" action="Registrati.jsp" >
+	<p>Se non sei registrato clicca qui:</p><input type="submit" value="Registrati">
 	</form>
-
 </body>
 </html>
