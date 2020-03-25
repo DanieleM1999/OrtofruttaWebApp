@@ -12,7 +12,7 @@ body {
 background-image:url("https://i.ibb.co/NTb2zpG/Whats-App-Image-2020-03-23-at-19-39-03.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
- background-size: cover;
+ background-size: 100% 100%;
   }
  h1{
 
@@ -22,11 +22,14 @@ background-image:url("https://i.ibb.co/NTb2zpG/Whats-App-Image-2020-03-23-at-19-
   h2{
  color: white;
  text-align: center;
- text-decoration: overline;
-
  }
   h3{
  color: white;
+ text-align: center;
+ }
+ p{
+ color: white;
+ font-size: 20px;
  text-align: center;
  }
  form{
@@ -44,34 +47,31 @@ background-image:url("https://i.ibb.co/NTb2zpG/Whats-App-Image-2020-03-23-at-19-
 		String messaggio = (String) request.getAttribute("messaggio");
 		if (messaggio != null) {
 	%>
-	<h1>ERRORE</h1>
-	<%=messaggio%>
+	<p>ERRORE</p>
+	<p><%=messaggio%></p>
 	<form action="SelectMenuPrincipale.jsp">
-		<br>
-		<br> <input type="submit" value="Back">
+		<input type="submit" value="Back">
 	</form>
 	<%
 		} else {
 	%>
-	
-	 <br> <br> <br> <br> <br> <br> <br> <br> <br>
+	<br> <br><br><br><br><br><br><br><br><br><br><br><br><br>
 	<h1>Benvenuto nel nostro bel negozio</h1>
+	<p>-----------------------------</p>
+	<h2>Questo è il negozietto di due personcine : Giulio e Daniele</h2>
 	 <br>
-	<h2>Questo è il negozietto di due personcine :Giulio and Daniele</h2>
-	 <br>
-	<h3>Per proseguire, selezionare una delle seguenti Opzioni!</h3>
-	 <br>
+	<h3>Per proseguire, selezionare una delle seguenti opzioni!</h3>
 	<form action="store-menu">
-		<label for="SceltaOperazioni">#############</label> <select
+		<label for="SceltaOperazioni"></label> <select
 			name="SceltaOperazioni">
-			<option value="Aggiungi Prodotto">Aggiungi Prodotto</option>
-			<option value="Stampa ListaProdotti">Stampa Lista di prodotti</option>
-			<option value="Registra Aquisto">Vendi Prodotto</option>
+			<option value="Aggiungi Prodotto">Aggiungi prodotto</option>
+			<option value="Stampa ListaProdotti">Stampa lista di prodotti</option>
+			<option value="Registra Aquisto">Vendi prodotto</option>
 			<option value="Registra Arrivo">Rifornisci magazzino</option>
-			<option value="Cambia Prezzo">Cambia Prezzo</option>
-			<option value="Cambia Descrizione">Cambia Descrizione</option>
+			<option value="Cambia Prezzo">Cambia prezzo</option>
+			<option value="Cambia Descrizione">Cambia descrizione</option>
 			 <br>
-		</select> <input type="submit" value="Conferma"> ##############
+		</select> <input type="submit" value="Conferma">
 
 	</form>
 	<%

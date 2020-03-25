@@ -1,3 +1,6 @@
+<%@page import="it.dstech.ortofrutta.Prodotto"%>
+<%@page import="java.util.List"%>
+<%@page import="it.dstech.gestionedb.AccessoDB"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -13,7 +16,7 @@ background-image:url("https://i.ibb.co/NTb2zpG/Whats-App-Image-2020-03-23-at-19-
  background-size: cover;
   }
 
-  h3{
+  h1{
  color: white;
  text-align: center;
  }
@@ -26,12 +29,22 @@ background-image:url("https://i.ibb.co/NTb2zpG/Whats-App-Image-2020-03-23-at-19-
 
 </head>
 <body>
-<h3>Inserisci i dati Richiesti</h3>
+<br><br><br><br><br><br><br><br>
+<h1>Inserisci i dati richiesti</h1>
 <form action="Desc" method="post">
+<%AccessoDB accessoDB = new AccessoDB(); %>
+<%List<Prodotto> lista = accessoDB.listaProdotti(); %>
 
- <label for="Name">Inserisci nome del prodotto aquistato:</label>
-  <input type="text" id="Name" name="Name"><br><br>
-  <label for="Info">Inserisci Nuove Informazioni:</label>
+ <label for="Name">Scegli prodotto:</label>
+	<select name = "Name">
+	
+	<% for (Prodotto p : lista){%>
+	  <option value="<%=p.getName()%>"><%=p.getName().toUpperCase()%></option>
+	  
+	  <% } %>
+	</select>
+		<br><br>
+  <label for="Info">Inserisci nuove informazioni:</label>
   <input type="text" id="Info" name="Info">
 
 <br><br>

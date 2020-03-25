@@ -12,7 +12,7 @@ background-image:url("https://i.ibb.co/NTb2zpG/Whats-App-Image-2020-03-23-at-19-
   background-attachment: fixed;
  background-size: cover;
   }
-  h3{
+  h1{
  color: white;
  text-align: center;
  }
@@ -25,8 +25,8 @@ background-image:url("https://i.ibb.co/NTb2zpG/Whats-App-Image-2020-03-23-at-19-
 </head>
 
 <body>
-<br> <br><br><br><br>
-<h3>Grazie per aver scelto il nostro store, addddios </h3>
+<br> <br><br><br><br><br> <br><br>
+<h1>Grazie per aver scelto il nostro store</h1>
 
 <form action="SelectMenuPrincipale.jsp">
 <br> <input type="submit" value="Back">

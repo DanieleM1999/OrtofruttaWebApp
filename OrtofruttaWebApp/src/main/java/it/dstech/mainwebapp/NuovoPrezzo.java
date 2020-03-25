@@ -21,7 +21,7 @@ public class NuovoPrezzo extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		AccessoDB accessoDB = new AccessoDB();
-		String nomeProdotto = req.getParameter("Name");
+		String nomeProdotto = req.getParameter("Prodotto");
 		double price = Double.parseDouble(req.getParameter("Price"));
 		try {
 			accessoDB.nuovoPrezzo(price, nomeProdotto);

@@ -8,6 +8,7 @@
 <head>
 <style>
 table, th, td {
+background-color: G;
 color: white;
 	border: 1.2px solid grey;
 }
@@ -20,7 +21,6 @@ background-image:url("https://i.ibb.co/NTb2zpG/Whats-App-Image-2020-03-23-at-19-
   h2{
  color: white;
  text-align: center;
- text-decoration: overline;
 
  }
  form{
@@ -33,7 +33,7 @@ background-image:url("https://i.ibb.co/NTb2zpG/Whats-App-Image-2020-03-23-at-19-
 </head>
 <body>
 
-	<h2>Lista dei Prodotti Ortofrutticoli</h2>
+	<h2>Lista dei prodotti ortofrutticoli</h2>
 
 	<%
 		AccessoDB accessoDB = new AccessoDB();
@@ -45,7 +45,7 @@ background-image:url("https://i.ibb.co/NTb2zpG/Whats-App-Image-2020-03-23-at-19-
 	<table align="center">
 		<tr>
 			<th>Nome</th>
-			<th>Quantità</th>
+			<th>Quantit&#224</th>
 			<th>Prezzo</th>
 			<th>Informazioni</th>
 		</tr>
@@ -53,10 +53,10 @@ background-image:url("https://i.ibb.co/NTb2zpG/Whats-App-Image-2020-03-23-at-19-
 			for (Prodotto p : listaProdotti) {
 		%>
 		<tr>
-			<td><%=p.getName()%></td>
-			<td><%=p.getInventories()%></td>
-			<td><%=p.getPrice()%></td>
-			<td><%=p.getInfo()%></td>
+			<td><%=p.getName().toUpperCase()%></td>
+			<td><%=p.getInventories()%>pz</td>
+			<td><%=p.getPrice()%>&#x20ac</td>
+			<td><%=p.getInfo().toLowerCase()%></td>
 		</tr>
 		<%
 			}

@@ -16,7 +16,7 @@ public class AggiungiProdotto extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		req.setAttribute("messaggio", "hai tentato di accedere manualmente alla aggiunta prodotti");
+		req.setAttribute("messaggio", "hai tentato di accedere manualmente all' aggiunta prodotti");
 		req.getRequestDispatcher("SelectMenuPrincipale.jsp").forward(req, resp);
 	}
 
