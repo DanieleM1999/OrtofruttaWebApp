@@ -8,8 +8,25 @@
 <head>
 <style>
 table, th, td {
+color: white;
 	border: 1.2px solid grey;
 }
+body {
+background-image:url("https://i.ibb.co/NTb2zpG/Whats-App-Image-2020-03-23-at-19-39-03.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+ background-size: cover;
+  }
+  h2{
+ color: white;
+ text-align: center;
+ text-decoration: overline;
+
+ }
+ form{
+ color: white;
+ text-align: center;
+ }
 </style>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
@@ -25,7 +42,7 @@ table, th, td {
 		List<Prodotto> listaProdotti = (List<Prodotto>) accessoDB.listaProdotti();
 	%>
 
-	<table>
+	<table align="center">
 		<tr>
 			<th>Nome</th>
 			<th>Quantità</th>

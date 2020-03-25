@@ -6,6 +6,24 @@
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>
+<style>
+body {
+background-image:url("https://i.ibb.co/NTb2zpG/Whats-App-Image-2020-03-23-at-19-39-03.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+ background-size: cover;
+  }
+
+  h3{
+ color: white;
+ text-align: center;
+ }
+ form{
+ color: white;
+ text-align: center;
+ }
+ 
+</style>
 <body>
 <h3>Inserisci i dati Richiesti</h3>
 <form action="prezzo" method="post"> 

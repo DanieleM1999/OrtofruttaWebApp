@@ -7,7 +7,35 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
-</head>
+<style>
+body {
+background-image:url("https://i.ibb.co/NTb2zpG/Whats-App-Image-2020-03-23-at-19-39-03.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+ background-size: cover;
+  }
+ h1{
+
+ color: white;
+ text-align: center;
+ }
+  h2{
+ color: white;
+ text-align: center;
+ text-decoration: overline;
+
+ }
+  h3{
+ color: white;
+ text-align: center;
+ }
+ form{
+ color: white;
+ text-align: center;
+ }
+ 
+</style>
+
 <body>
 
 
@@ -25,11 +53,14 @@
 	<%
 		} else {
 	%>
+	
+	 <br> <br> <br> <br> <br> <br> <br> <br> <br>
 	<h1>Benvenuto nel nostro bel negozio</h1>
-	<h3>Questo è il negozietto di due personcine Daniele il boss e
-		Giulio il reietto.</h3>
-	<h4>Per proseguire, selezionare una delle seguenti Opzioni!</h4><br>
-		<br>
+	 <br>
+	<h2>Questo è il negozietto di due personcine :Giulio and Daniele</h2>
+	 <br>
+	<h3>Per proseguire, selezionare una delle seguenti Opzioni!</h3>
+	 <br>
 	<form action="store-menu">
 		<label for="SceltaOperazioni">#############</label> <select
 			name="SceltaOperazioni">
@@ -39,6 +70,7 @@
 			<option value="Registra Arrivo">Rifornisci magazzino</option>
 			<option value="Cambia Prezzo">Cambia Prezzo</option>
 			<option value="Cambia Descrizione">Cambia Descrizione</option>
+			 <br>
 		</select> <input type="submit" value="Conferma"> ##############
 
 	</form>
