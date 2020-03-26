@@ -22,7 +22,7 @@ public class Switch extends HttpServlet {
 			req.getRequestDispatcher("Aquisto.jsp").forward(req, resp);	
 			}
 		else if(parametro.equals("StampaListaClienti")) {
-			req.getRequestDispatcher("Carico.jsp").forward(req, resp);	
+			req.getRequestDispatcher("StampaClienti.jsp").forward(req, resp);	
 			}
 		else if(parametro.equals("Fai2+2")) {
 			req.getRequestDispatcher("2+2.jsp").forward(req, resp);	
