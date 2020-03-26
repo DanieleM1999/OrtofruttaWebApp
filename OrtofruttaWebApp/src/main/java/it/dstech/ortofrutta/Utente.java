@@ -10,7 +10,7 @@ public class Utente {
 	private String cognome;
 	private String eta;
 	private String tipo;
-	private List<Scontrino> listaScontrini;
+	private List<Prodotto> carrello;
 	
 	public Utente(String username,String name,String cognome, String eta,String tipo) {
 		super();
@@ -19,7 +19,7 @@ public class Utente {
 		this.name = name;
 		this.cognome = cognome;
 		this.eta = eta;
-		this.listaScontrini = new ArrayList<Scontrino>();
+		this.carrello = new ArrayList<Prodotto>();
 	}
 
 	public String getName() {
@@ -54,12 +54,12 @@ public class Utente {
 		this.eta = eta;
 	}
 
-	public List<Scontrino> getListaScontrini() {
-		return listaScontrini;
+	public List<Prodotto> getcarrello() {
+		return carrello;
 	}
 
-	public void setListaScontrini(List<Scontrino> listaScontrini) {
-		this.listaScontrini = listaScontrini;
+	public void setcarrello(List<Prodotto> listaScontrini) {
+		this.carrello = listaScontrini;
 	}
 
 	public String getTipo() {

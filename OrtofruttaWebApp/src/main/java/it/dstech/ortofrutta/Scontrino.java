@@ -7,10 +7,10 @@ public class Scontrino {
 	
 	private String proprietario;
 	private String dataEsecuzione;
-	private String spesa;
+	private double spesa;
 	private List<Prodotto> listaProdotti;
 	
-	public Scontrino(String proprietario, String dataEsecuzione, String spesa) {
+	public Scontrino(String proprietario, String dataEsecuzione, double spesa) {
 		super();
 		this.proprietario = proprietario;
 		this.dataEsecuzione = dataEsecuzione;
@@ -34,11 +34,11 @@ public class Scontrino {
 		this.dataEsecuzione = dataEsecuzione;
 	}
 
-	public String getSpesa() {
+	public double getSpesa() {
 		return spesa;
 	}
 
-	public void setSpesa(String spesa) {
+	public void setSpesa(double spesa) {
 		this.spesa = spesa;
 	}
 

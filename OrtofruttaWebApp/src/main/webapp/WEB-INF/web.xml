@@ -86,5 +86,14 @@
 		<servlet-name>switch</servlet-name>
 		<url-pattern>/switch</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Carrello</servlet-name>
+		<servlet-class>it.dstech.accesso.Carrello</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Carrello</servlet-name>
+		<url-pattern>/Carrello</url-pattern>
+	</servlet-mapping>
 </web-app>
 

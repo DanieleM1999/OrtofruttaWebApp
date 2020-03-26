@@ -11,6 +11,8 @@ import java.util.List;
 import com.mysql.cj.xdevapi.Client;
 
 import it.dstech.gestionedb.AccessoDB;
+import it.dstech.ortofrutta.Prodotto;
+import it.dstech.ortofrutta.Scontrino;
 import it.dstech.ortofrutta.Utente;
 
 public class GestisciUtenti {
@@ -62,4 +64,28 @@ public class GestisciUtenti {
 	}
 	return false;
 	}
+
+	public void gestioneCarrello(String User,String prodottoNome,int quantita) throws ClassNotFoundException, SQLException {
+		AccessoDB accessoDB = new AccessoDB();
+		for (Utente u : lista()) {
+			if(u.getUsername().equalsIgnoreCase(User)) {
+				for (Prodotto p : accessoDB.listaProdotti()) {
+					if(p.getName().equalsIgnoreCase(prodottoNome) && accessoDB.inventarioAttuale(prodottoNome)-quantita>=0) {
+						double prezzo = p.getPrice() * quantita;
+						aggiungiProdottoalCarrello(p, u, prezzo, accessoDB);
+					}
+				}
+			}
+		}
+	}
+	
+	public void aggiungiProdottoalCarrello(Prodotto prodotto,Utente u,double prezzo, AccessoDB ac) throws SQLException, ClassNotFoundException {
+		String query = "INSERT INTO Carrello (Proprietario,NomeProdotto,CostoCarrello) VALUES (?,?,?);";
+		PreparedStatement statement = ac.accessoDB().prepareStatement(query);
+		statement.setString(1, u.getUsername());
+		statement.setString(2, prodotto.getName());
+		statement.setDouble(3, prezzo);
+		statement.execute();
+	}
+
 }

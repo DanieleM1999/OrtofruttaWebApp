@@ -13,7 +13,7 @@ public class Switch extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String parametro = req.getParameter("switch");
 		if(parametro.equals("AggiungiAlCarrello")) {
-			req.getRequestDispatcher("AggiungiProdotto.jsp").forward(req, resp);	
+			req.getRequestDispatcher("Carrello.jsp").forward(req, resp);	
 			}
 		else if(parametro.equals("Paga")) {
 			req.getRequestDispatcher("Stampa.jsp").forward(req, resp);	

@@ -16,7 +16,7 @@ public class AccessoDB {
 	public Connection accessoDB() throws ClassNotFoundException, SQLException {
 		
 	Class.forName("com.mysql.cj.jdbc.Driver");
-	String pass = "0NNeA14tJn";
+	String pass = "bnkSGlG6cg";
 	String user = "wx7ypi70Zd";
 	String url = "jdbc:mysql://remotemysql.com:3306/wx7ypi70Zd?useUnicode=true&useLegacyDatetimeCode=false&serverTimezone=UTC&createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true&useSSL=false";
 	Connection con = DriverManager.getConnection(url, user, pass);
@@ -77,7 +77,7 @@ public class AccessoDB {
 		}
 	}
 
-	private int inventarioAttuale(String nomeProdotto) throws SQLException, ClassNotFoundException {
+	public int inventarioAttuale(String nomeProdotto) throws SQLException, ClassNotFoundException {
 		String querylettura = "SELECT Inventories FROM ProdottiOrtofrutta WHERE Name =\""+nomeProdotto+"\";";
 		Statement statement1 = accessoDB().createStatement();
 		ResultSet resultSet = statement1.executeQuery(querylettura);
