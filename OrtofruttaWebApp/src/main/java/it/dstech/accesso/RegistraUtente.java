@@ -28,10 +28,12 @@ public class RegistraUtente extends HttpServlet {
 		Utente utente = new Utente(username, name, cognome, eta, tipo);
 		GestisciUtenti gestisciUtenti = new GestisciUtenti();
 		try {
-		if(gestisciUtenti.aggiungiUtente(utente)) {
-			req.getRequestDispatcher("SelectMenuPrincipale.jsp");
-		}else {
-			req.getRequestDispatcher("Errore.jsp");
+		boolean a = gestisciUtenti.aggiungiUtente(utente);
+		if(a) {
+			req.getRequestDispatcher("SelectMenuPrincipale.jsp").forward(req, resp);;
+		}
+		if(!a) {
+			req.getRequestDispatcher("Errore.jsp").forward(req, resp);;
 		}
 		} catch (ClassNotFoundException | SQLException e1) {
 			e1.printStackTrace();

@@ -77,4 +77,14 @@
 		<servlet-name>Registrazione</servlet-name>
 		<url-pattern>/Registrazione</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>switch</servlet-name>
+		<servlet-class>it.dstech.accesso.Switch</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>switch</servlet-name>
+		<url-pattern>/switch</url-pattern>
+	</servlet-mapping>
 </web-app>
+

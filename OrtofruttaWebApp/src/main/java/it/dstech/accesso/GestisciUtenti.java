@@ -25,13 +25,13 @@ public class GestisciUtenti {
 			
 			return false;
 		}else {
-			PreparedStatement preparedStatement = con().prepareStatement("INSERT INTO Utenti (Nome,Username,Età,Cognome,Tipo) Values (?,?,?,?,?);");
+			PreparedStatement preparedStatement = con().prepareStatement("INSERT INTO Utente (Nome,Username,Età,Cognome,Tipo) Values (?,?,?,?,?);");
 			preparedStatement.setString(1, utente.getName());
 			preparedStatement.setString(2, utente.getUsername());
 			preparedStatement.setString(3, utente.getEta());
 			preparedStatement.setString(4, utente.getCognome());
 			preparedStatement.setString(5, utente.getTipo());
-			
+			preparedStatement.execute();
 			return true;
 		}
 		

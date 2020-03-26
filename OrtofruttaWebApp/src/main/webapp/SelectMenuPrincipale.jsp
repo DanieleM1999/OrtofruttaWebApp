@@ -56,9 +56,9 @@ background-image:url("https://i.ibb.co/NTb2zpG/Whats-App-Image-2020-03-23-at-19-
 		} else {
 	%>
 	<br> <br><br><br><br><br><br><br><br><br><br>
-	<h1>Benvenuto nel nostro bel negozio</h1>
+	<h1 style="text-decoration: overline;">Benvenuto nel nostro bel negozio</h1>
 	<p>-----------------------------</p>
-	<h2>Questo è il negozietto di due personcine : Giulio e Daniele</h2>
+	<h2 style="text-decoration: underline;">Questo è il negozietto di due personcine : Giulio e Daniele</h2>
 	 <br>
 	<h3>Per proseguire, selezionare una delle seguenti opzioni!</h3>
 	<form action="store-menu">
@@ -70,12 +70,20 @@ background-image:url("https://i.ibb.co/NTb2zpG/Whats-App-Image-2020-03-23-at-19-
 			<option value="Registra Arrivo">Rifornisci magazzino</option>
 			<option value="Cambia Prezzo">Cambia prezzo</option>
 			<option value="Cambia Descrizione">Cambia descrizione</option>
-			 <br>
 		</select> <input type="submit" value="Conferma">
-
 	</form>
-	<%
-		}
-	%>
+	
+	<h3>Aggiornamento 2.0 nuove operazioni solo per voi &#128521 &#10084;&#65039 !!</h3>
+		<form action="switch">
+		<label for="switch"></label> <select
+			name="switch">
+			<option value="AggiungiAlCarrello">Aggiungi al carrello</option>
+			<option value="Paga">Paga</option>
+			<option value="StampaCarrello">Stampa carrello</option>
+			<option value="StampaListaClienti">Stampa lista clienti</option>
+			<option value="Fai2+2">Quanto fa 2+2 ?</option>
+		</select> <input type="submit" value="Conferma">
+	</form>
+	<% } %>
 </body>
 </html>
